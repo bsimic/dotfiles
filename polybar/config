@@ -8,13 +8,13 @@
 ;=====================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #222
+;background = ${xrdb:color0:#383c4a}
+background = #383c4a
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
-primary = #ffb52a
+primary = #65acff
 secondary = #e60053
 alert = #bd2c40
 
@@ -48,7 +48,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = spotify
-modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = filesystem xbacklight wlan eth battery temperature date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -205,7 +205,7 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp0s20u3u2
+interface = wlp3s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -227,7 +227,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = eno1
+interface = enp2s0
 interval = 3.0
 
 format-connected-underline = #55aa55
@@ -287,8 +287,8 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
-battery = BAT0
-adapter = ADP1
+battery = battery_BAT0
+adapter = line_power_ADP0
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
@@ -315,7 +315,7 @@ animation-charging-framerate = 750
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 60
+warn-temperature = 80
 
 format = <ramp> <label>
 format-underline = #f50a4d
