@@ -8,18 +8,13 @@
 ;=====================================================
 
 [colors]
-[colors]
-;background = ${xrdb:color0:#222}
-;background = #222
-;background = #3f3f3f
-background = #504945
+;background = ${xrdb:color0:#383c4a}
+background = #383c4a
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
-;foreground = #dfdfdf
-foreground = #fbf1c7
-;foreground = #ffffff
+foreground = #dfdfdf
 foreground-alt = #555
-primary = #ffb52a
+primary = #65acff
 secondary = #e60053
 alert = #bd2c40
 
@@ -130,12 +125,7 @@ index-sort = true
 wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
-pin-workspaces = false
-
-; This will split the workspace name on ':'
-; Default: false
-strip-wsnumbers = true
-
+;pin-workspaces = true
 
 label-mode-padding = 2
 label-mode-foreground = #000
