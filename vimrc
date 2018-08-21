@@ -48,8 +48,8 @@ set laststatus=2
 set number
 
 " Color scheme (terminal)
-colorscheme gruvbox
-set background=dark
+"colorscheme gruvbox
+"set background=dark
 
 " Enable folding
 set foldmethod=indent

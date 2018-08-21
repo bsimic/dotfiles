@@ -8,20 +8,23 @@
 ;=====================================================
 
 [colors]
-[colors]
-;background = ${xrdb:color0:#222}
-;background = #222
-;background = #3f3f3f
-background = #504945
+;background = ${xrdb:color0:#383c4a}
+;background = #383c4a
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 ;foreground = #dfdfdf
-foreground = #fbf1c7
-;foreground = #ffffff
 foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+;primary = #65acff
+;secondary = #e60053
+;alert = #bd2c40
+
+background = ${xrdb:color0:#222}
+foreground = ${xrdb:color7:#222}
+;foreground-alt = ${xrdb:color7:#222}
+primary = ${xrdb:color1:#222}
+secondary = ${xrdb:color2:#222}
+alert = ${xrdb:color3:#222}
+
 
 [bar/bar1]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -29,7 +32,7 @@ width = 100%
 height = 27
 ;offset-x = 1%
 ;offset-y = 1%
-radius = 6.0
+radius = 0
 fixed-center = false
 
 background = ${colors.background}
@@ -38,7 +41,7 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 4
+border-size = 0
 border-color = #00000000
 
 padding-left = 0
@@ -51,8 +54,8 @@ font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left = bspwm i3
-modules-center = spotify
+modules-left = i3
+modules-center = spotify mpd
 modules-right = filesystem wlan eth battery temperature date
 
 tray-position = right
@@ -99,6 +102,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
+mount-1 = /home
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
@@ -113,7 +117,7 @@ label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
 label-occupied = %index%
-label-occupied-padding = 2
+label-occupied-padding= 2
 
 label-urgent = %index%!
 label-urgent-background = ${colors.alert}
@@ -127,15 +131,10 @@ label-empty-padding = 2
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
-wrapping-scroll = false
+;wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
-pin-workspaces = false
-
-; This will split the workspace name on ':'
-; Default: false
-strip-wsnumbers = true
-
+pin-workspaces = true
 
 label-mode-padding = 2
 label-mode-foreground = #000
