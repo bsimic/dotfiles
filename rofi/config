@@ -1,0 +1,15 @@
+configuration {
+	rofi.show-icons:            false
+	rofi.modi:                  drun,run,window,ssh
+	rofi.lines:                 7
+	rofi.line-padding:          20
+	rofi.matching:              fuzzy
+	rofi.bw:                    0
+	rofi.padding:               50
+	rofi.separator-style:       none
+	rofi.hide-scrollbar:        true
+	rofi.line-margin:           5
+	rofi.font:                  Hack 12
+	rofi.theme: /usr/share/rofi/themes/Arc-Dark.rasi
+	;rofi.theme:
+}
