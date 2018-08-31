@@ -1,10 +1,10 @@
 #!/bin/bash
 
-cp -R .config/i3 ~/dotfiles/i3
-cp -R .config/polybar ~/dotfiles/polybar
-cp -R .config/ranger ~/dotfiles/ranger
-cp -R .config/redshift ~/dotfiles/redshift
-cp -R .config/rofi ~/dotfiles/rofi
+cp -R ~/.config/i3 ~/dotfiles/i3
+cp -R ~/.config/polybar ~/dotfiles/polybar
+cp -R ~/.config/ranger ~/dotfiles/ranger
+cp -R ~/.config/redshift ~/dotfiles/redshift
+cp -R ~/.config/rofi ~/dotfiles/rofi
 cp -R ~/.vimrc ~/dotfiles/vimrc
 cp -R ~/.xprofile ~/dotfiles/xprofile
 cp -R ~/.Xdefaults ~/dotfiles/Xdefaults
