@@ -21,9 +21,10 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
-Plugin 'jistr/vim-nerdtree-tabs'
+"Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Bundle 'Valloric/YouCompleteMe'
+Plugin 'vim-latex/vim-latex'
+"Bundle 'Valloric/YouCompleteMe'
 " plugin from http://vim-scripts.org/vim/scripts.html
 
 " All of your Plugins must be added before the following line
@@ -46,6 +47,7 @@ nmap <silent> <C-N> :NERDTreeToggle<CR>
 " Status bar
 set laststatus=2
 set number
+set relativenumber
 
 " Color scheme (terminal)
 "colorscheme gruvbox
