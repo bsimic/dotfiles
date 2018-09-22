@@ -155,4 +155,4 @@ cat ~/.cache/wal/sequences
 source ~/.cache/wal/colors-tty.sh
 
 alias mp3="youtube-dl --extract-audio --audio-format mp3"
-alias r="cat /home/int0verflow/.cache/wal/sequences && ranger"
+#set -o vi

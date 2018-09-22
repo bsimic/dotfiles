@@ -1,7 +1,7 @@
 configuration {
 	rofi.show-icons:            false
 	rofi.modi:                  drun,run,window,ssh
-	rofi.lines:                 7
+	rofi.lines:                 5
 	rofi.line-padding:          20
 	rofi.matching:              fuzzy
 	rofi.bw:                    0

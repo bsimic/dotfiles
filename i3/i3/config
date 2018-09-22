@@ -31,6 +31,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec urxvt
+bindsym $mod+Shift+Return exec terminator
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -44,7 +45,8 @@ bindsym $mod+d exec rofi -show drun
 
 #shortcuts
 bindsym $mod+Shift+o exec thunar
-bindsym $mod+q exec /opt/dynalist/dynalist
+bindsym $mod+q exec todoist
+bindsym $mod+Shift+e exec /opt/dynalist/dynalist
 bindsym $mod+o exec urxvt -e ranger 
 bindsym $mod+i exec firefox
 bindsym $mod+m exec urxvt -e ncmpcpp
@@ -140,7 +142,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

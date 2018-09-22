@@ -21,7 +21,7 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
-"Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'vim-latex/vim-latex'
 "Bundle 'Valloric/YouCompleteMe'
@@ -48,10 +48,8 @@ nmap <silent> <C-N> :NERDTreeToggle<CR>
 set laststatus=2
 set number
 set relativenumber
-
-" Color scheme (terminal)
-"colorscheme gruvbox
-"set background=dark
+set encoding=utf-8
+set linebreak
 
 " Enable folding
 set foldmethod=indent
@@ -65,3 +63,25 @@ let python_highlight_all=1
 syntax on
 
 set clipboard=unnamed
+
+set splitbelow
+set splitright
+
+ "split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Get line, word and character counts with F3:
+map <F3> :!wc <C-R>%<CR>
+
+" Spell-check set to F6:
+map <F6> :setlocal spell! spelllang=en_us<CR>
+
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+set t_Co=256
+
