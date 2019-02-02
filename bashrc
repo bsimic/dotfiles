@@ -80,6 +80,7 @@ if ${use_color} ; then
 	alias egrep='egrep --colour=auto'
 	alias fgrep='fgrep --colour=auto'
 	alias mp3='youtube-dl --extract-audio --audio-format mp3'
+	alias sshme='ssh int0verflow@192.168.0.22'
 else
 	if [[ ${EUID} == 0 ]] ; then
 		# show root@ when we don't have colors

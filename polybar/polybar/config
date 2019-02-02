@@ -56,7 +56,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = spotify mpd
-modules-right = filesystem wlan eth battery temperature date
+modules-right = backlight filesystem wlan eth battery temperature date
 
 tray-position = right
 tray-padding = 2
@@ -177,8 +177,11 @@ label-song-ellipsis = true
 [module/xbacklight]
 type = internal/xbacklight
 
-format = <label> <bar>
-label = BL
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
+format = <label>
+label = %percentage%%
 
 bar-width = 10
 bar-indicator = |

@@ -46,8 +46,6 @@ bindsym $mod+d exec dmenu_run
 
 #shortcuts
 bindsym $mod+Shift+o exec thunar
-bindsym $mod+Shift+e exec todoist
-bindsym $mod+q exec /opt/dynalist/dynalist
 bindsym $mod+o exec thunar 
 bindsym $mod+i exec firefox
 
@@ -85,7 +83,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+bindsym $mod+Shift+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -180,13 +178,17 @@ hide_edge_borders both
 #finds out, if available)
 #bar {
 #        status_command i3status
+#	position top
 #}
+
+
+
 
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
 exec --no-startup-id xfce4-volumed &
 exec --no-startup-id xfce4-power-manager &
 exec --no-startup-id nm-applet &
-exec compton
+exec --no-startup-id compton
 
 #pulse audio
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
@@ -194,8 +196,9 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -10%; exe
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 #brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 1 # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 1 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10 # decrease screen brightness
+
 
 #media controls
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -238,8 +241,17 @@ exec_always --no-startup-id clipit -d -n
 exec --no-startup-id pamac-tray
 exec --no-startup-id wal -R
 exec --no-startup-id mpd
+exec --no-startup-id unclutter
 
+#where to
 for_window [class="Spotify"] move to workspace $workspace4
 for_window [class="Audacious"] move to workspace $workspace4
 for_window [class="Steam"] move to workspace $workspace5
 for_window [class="Thunderbird"] move to workspace $workspace3
+
+bindsym $mod+m exec --no-startup-id $term -e ncmpcpp
+
+#scripts
+bindsym $mod+Shift+e exec --no-startup-id ~/scripts/dmenuunicode.sh
+bindsym $mod+s exec --no-startup-id ~/scripts/ducksearch.sh
+bindsym $mod+Shift+x exec --no-startup-id ~/scripts/lockscreen.sh
