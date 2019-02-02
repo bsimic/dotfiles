@@ -30,17 +30,19 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+#bindsym $mod+Return exec urxvt
+#bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec st
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run
 #bindsym $mod+d exec rofi -show run
 #bindsym $mod+d exec --no-startup-id rofi -show run -display-run ">>>" -theme gruvbox-dark-hard
-bindsym $mod+d exec rofi -show drun 
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+#bindsym $mod+d exec rofi -show drun 
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 #shortcuts
 bindsym $mod+Shift+o exec thunar
@@ -180,41 +182,41 @@ hide_edge_borders both
 #        status_command i3status
 #}
 
-#exec_always --no-startup-id ~/.config/i3/polybar.sh &
-#exec --no-startup-id xfce4-volumed &
-#exec --no-startup-id xfce4-power-manager &
-#exec --no-startup-id nm-applet &
-#exec compton
+exec_always --no-startup-id ~/.config/i3/polybar.sh &
+exec --no-startup-id xfce4-volumed &
+exec --no-startup-id xfce4-power-manager &
+exec --no-startup-id nm-applet &
+exec compton
 
 #pulse audio
-#bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
-#bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -10%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
-#bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -10%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 #brightness
-#bindsym XF86MonBrightnessUp exec --no-startup-id light -A 1 # increase screen brightness
-#bindsym XF86MonBrightnessDown exec --no-startup-id light -U 1 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 1 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 1 # decrease screen brightness
 
 #media controls
-#bindsym XF86AudioPlay exec playerctl play-pause
-#bindsym XF86AudioNext exec playerctl next
-#bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 #exit
-#set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
-#mode "$mode_system" {
-#    bindsym l exec --no-startup-id $Locker, mode "default"
-#    bindsym e exec --no-startup-id i3-msg exit, mode "default"
-#    bindsym s exec --no-startup-id systemctl suspend, mode "default"
-#    bindsym h exec --no-startup-id systemctl hibernate, mode "default"
-#    bindsym r exec --no-startup-id systemctl reboot, mode "default"
-#    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
 
-    # back to normal: Enter or Escape
-#    bindsym Return mode "default"
-#    bindsym Escape mode "default"
-#}
-#bindsym $mod+p mode "$mode_system"
+   # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+p mode "$mode_system"
 
 set $mode_system1 Screens (l) laptop, (m) monitor, (b) both
 mode "$mode_system1" {
@@ -229,13 +231,13 @@ mode "$mode_system1" {
 bindsym $mod+x mode "$mode_system1"
 
 #background image
-#exec --no-startup-id feh --bg-scale ~/Pictures/misc/haven.jpg
-#exec --no-startup-id volumeicon
-#exec --no-startup-id redshift-gtk
-#exec_always --no-startup-id clipit -d -n
-#exec --no-startup-id pamac-tray
+exec --no-startup-id feh --bg-scale ~/Pictures/misc/haven.jpg
+exec --no-startup-id volumeicon
+exec --no-startup-id redshift-gtk
+exec_always --no-startup-id clipit -d -n
+exec --no-startup-id pamac-tray
 exec --no-startup-id wal -R
-#exec --no-startup-id mpd
+exec --no-startup-id mpd
 
 for_window [class="Spotify"] move to workspace $workspace4
 for_window [class="Audacious"] move to workspace $workspace4

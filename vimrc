@@ -51,6 +51,9 @@ set relativenumber
 set encoding=utf-8
 set linebreak
 
+set shiftwidth=2
+set softtabstop=2
+
 " Enable folding
 set foldmethod=indent
 set foldlevel=99

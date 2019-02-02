@@ -1,7 +1,1 @@
-URxvt.intensityStyles:	false
-URxvt.background:       [70]#000000
-URxvt.font: xft:monospace:size=12
-urxvt*transparent: true
-urxvt*shading: 30
-URxvt.scrollBar:	false
-URxvt.cursorColor:	white
+*.alpha: 150
