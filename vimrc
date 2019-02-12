@@ -24,6 +24,8 @@ Plugin 'nvie/vim-flake8'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'vim-latex/vim-latex'
+Plugin 'dylanaraps/wal.vim'
+
 "Bundle 'Valloric/YouCompleteMe'
 " plugin from http://vim-scripts.org/vim/scripts.html
 

@@ -13,5 +13,5 @@ cp -r ~/.bashrc ~/dotfiles/bashrc
 echo "Dotfile grab complete"
 
 git add .
-git commit -m "update"
+git commit -m "Automatic weekly update"
 git push origin master

@@ -32,7 +32,7 @@ floating_modifier $mod
 # start a terminal
 #bindsym $mod+Return exec urxvt
 #bindsym $mod+Return exec xfce4-terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec st -e
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -46,7 +46,7 @@ bindsym $mod+d exec dmenu_run
 
 #shortcuts
 bindsym $mod+Shift+o exec thunar
-bindsym $mod+o exec thunar 
+bindsym $mod+o exec st -e ranger
 bindsym $mod+i exec firefox
 
 # change focus
@@ -189,6 +189,7 @@ exec --no-startup-id xfce4-volumed &
 exec --no-startup-id xfce4-power-manager &
 exec --no-startup-id nm-applet &
 exec --no-startup-id compton
+exec --no-startup-id kdeconnect-indicator
 
 #pulse audio
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
@@ -234,7 +235,7 @@ mode "$mode_system1" {
 bindsym $mod+x mode "$mode_system1"
 
 #background image
-exec --no-startup-id feh --bg-scale ~/Pictures/misc/haven.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/mountain_background.jpg
 exec --no-startup-id volumeicon
 exec --no-startup-id redshift-gtk
 exec_always --no-startup-id clipit -d -n
