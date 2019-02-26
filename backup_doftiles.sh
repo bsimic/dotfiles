@@ -9,7 +9,6 @@ cp -r ~/.vimrc ~/dotfiles/vimrc
 cp -r ~/.xprofile ~/dotfiles/xprofile
 cp -r ~/.Xdefaults ~/dotfiles/Xdefaults
 cp -r ~/.bashrc ~/dotfiles/bashrc
-cp -r ~/Repos ~/dotfiles/Repos
 
 echo "Dotfile grab complete"
 
