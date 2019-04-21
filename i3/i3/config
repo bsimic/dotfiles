@@ -235,7 +235,7 @@ mode "$mode_system1" {
 bindsym $mod+x mode "$mode_system1"
 
 #background image
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/mountain_background.jpg
+#exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/mountain_background.jpg
 exec --no-startup-id volumeicon
 exec --no-startup-id redshift-gtk
 exec_always --no-startup-id clipit -d -n
@@ -245,10 +245,10 @@ exec --no-startup-id mpd
 exec --no-startup-id unclutter
 
 #where to
-for_window [class="Spotify"] move to workspace $workspace4
-for_window [class="Audacious"] move to workspace $workspace4
-for_window [class="Steam"] move to workspace $workspace5
-for_window [class="Thunderbird"] move to workspace $workspace3
+#for_window [class="Spotify"] move to workspace $workspace4
+#for_window [class="Audacious"] move to workspace $workspace4
+#for_window [class="Steam"] move to workspace $workspace5
+#for_window [class="Thunderbird"] move to workspace $workspace3
 
 bindsym $mod+m exec --no-startup-id $term -e ncmpcpp
 

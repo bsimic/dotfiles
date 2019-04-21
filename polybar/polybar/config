@@ -56,7 +56,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = spotify mpd
-modules-right = backlight filesystem wlan eth battery temperature date
+modules-right = alsa backlight filesystem wlan eth battery temperature date
 
 tray-position = right
 tray-padding = 2
