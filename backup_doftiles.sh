@@ -9,7 +9,7 @@ cp -r ~/.vimrc ~/dotfiles/vimrc
 cp -r ~/.xprofile ~/dotfiles/xprofile
 cp -r ~/.Xdefaults ~/dotfiles/Xdefaults
 cp -r ~/.bashrc ~/dotfiles/bashrc
-
+cp -r ~/.oh-my-zsh ~/dotfiles/oh-my-zsh
 echo "Dotfile grab complete"
 
 git add .
