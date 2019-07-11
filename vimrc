@@ -16,6 +16,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/MatchTagAlways'
+Plugin 'alvan/vim-closetag'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
@@ -31,9 +32,9 @@ Plugin 'dylanaraps/wal.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
+"filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+filetype plugin on
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -54,7 +55,7 @@ set encoding=utf-8
 set linebreak
 
 set shiftwidth=2
-set softtabstop=2
+set softtabstop=4
 
 " Enable folding
 set foldmethod=indent
@@ -90,3 +91,7 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 set t_Co=256
 
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>

@@ -99,3 +99,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias jarvis="ssh ro0ter@192.168.0.22"
+alias mreza="systemctl restart NetworkManager.service"
+alias mape="java -jar -Xmx200M ~/dnd/tools/dungeonographer.jar"
