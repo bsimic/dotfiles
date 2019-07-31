@@ -46,7 +46,8 @@ bindsym $mod+d exec dmenu_run
 
 #shortcuts
 bindsym $mod+Shift+o exec thunar
-bindsym $mod+o exec st -e nnn 
+#bindsym $mod+o exec st -e nnn 
+bindsym $mod+o exec st -e vifm 
 bindsym $mod+i exec firefox
 
 # change focus
