@@ -10,6 +10,5 @@ configuration {
 	rofi.hide-scrollbar:        true
 	rofi.line-margin:           5
 	rofi.font:                  Hack 12
-	rofi.theme: /usr/share/rofi/themes/Arc-Dark.rasi
-	;rofi.theme:
+	rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
 }

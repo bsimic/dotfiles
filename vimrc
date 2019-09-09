@@ -18,11 +18,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/MatchTagAlways'
 Plugin 'alvan/vim-closetag'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'vim-scripts/indentpython.vim'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'nvie/vim-flake8'
-Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'vim-latex/vim-latex'
 Plugin 'dylanaraps/wal.vim'
@@ -52,41 +47,14 @@ set laststatus=2
 set number
 set relativenumber
 set encoding=utf-8
-set linebreak
 
 set shiftwidth=2
 set softtabstop=4
 
-" Enable folding
-set foldmethod=indent
-set foldlevel=99
-
-" Enable folding with the spacebar
-nnoremap <space> za
-let g:SimpylFold_docstring_preview=1
-
-let python_highlight_all=1
 syntax on
+set autoindent
 
 set clipboard=unnamed
-
-set splitbelow
-set splitright
-
- "split navigations
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
-" Get line, word and character counts with F3:
-map <F3> :!wc <C-R>%<CR>
-
-" Spell-check set to F6:
-map <F6> :setlocal spell! spelllang=en_us<CR>
-
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 set t_Co=256
@@ -95,5 +63,3 @@ map <Left> <Nop>
 map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
-
-set pastetoggle=<F3>

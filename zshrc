@@ -102,3 +102,4 @@ source $ZSH/oh-my-zsh.sh
 alias jarvis="ssh ro0ter@192.168.0.22"
 alias mreza="systemctl restart NetworkManager.service"
 alias mape="java -jar -Xmx200M ~/dnd/tools/dungeonographer.jar"
+alias mp3="youtube-dl --extract-audio --audio-format mp3"
